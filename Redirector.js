@@ -43,3 +43,5 @@ if(getMobileOperatingSystem() == "WindowsComp"{
     console.log("using window computer");
 }
 
+document.getElementById("TestText").innerHTML = "<em>Updated with HTML</em>";
+
