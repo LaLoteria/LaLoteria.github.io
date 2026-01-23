@@ -41,8 +41,10 @@ if (getMobileOperatingSystem() == "Android") {
 
 if(getMobileOperatingSystem() == "WindowsComp"{
     console.log("using window computer");
+    document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
+
 }
 
-document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
+
 
 
