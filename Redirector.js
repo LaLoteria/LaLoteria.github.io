@@ -2,8 +2,8 @@ const currentUrl = window.location.href;
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
+    if (/windows/i.test(userAgent)) {
+        return "WindowsComp";
     }
     
     if (/android/i.test(userAgent)) {
@@ -38,3 +38,8 @@ if (getMobileOperatingSystem() == "Android") {
     setTimeout(()=>{window.location.href = "https://play.google.com/store/apps/details/La_Loteria?id=com.HappyTimes.LaLoteriaA&hl=en_US";},
 3000);
 }
+
+if(getMobileOperatingSystem() == "WindowsComp"{
+    console.log("using window computer");
+}
+
