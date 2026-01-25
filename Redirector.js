@@ -52,6 +52,7 @@ if (getMobileOperatingSystem() == "Android") {
     {
     const textElement = document.getElementById("WindowMax");
     textElement.innerText = "On a Windows Computer.";
+        window.location.href = "WindowsComp.html"
     }
 
   if(getMobileOperatingSystem() == "MacComp")
@@ -60,5 +61,6 @@ if (getMobileOperatingSystem() == "Android") {
     textElement.innerText = "On a Mac Computer.";
   }
     
+
 
 
