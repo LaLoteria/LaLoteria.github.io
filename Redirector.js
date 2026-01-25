@@ -1,20 +1,28 @@
 const currentUrl = window.location.href;
 
-function getMobileOperatingSystem() {
+function getMobileOperatingSystem()
+{
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/windows/i.test(userAgent)) {
+    
+    if (/windows/i.test(userAgent)) 
+    {
         return "WindowsComp";
     }
     
-    if (/android/i.test(userAgent)) {
+    if (/android/i.test(userAgent))
+    {
         return "Android";
     }
     
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) 
+    {
         return "iOS";
     }
-   if (/Macintosh/i.test(userAgent) && navigator.maxTouchPoints <= 1) {
+    
+   if (/Macintosh/i.test(userAgent) && navigator.maxTouchPoints <= 1)
+   {
         return "MacComp";
+   }
     return "unknown";
 }
 
@@ -41,13 +49,16 @@ if (getMobileOperatingSystem() == "Android") {
 }
 
 
-    if(getMobileOperatingSystem() == "WindowsComp"{
+    if(getMobileOperatingSystem() == "WindowsComp")
+    {
     const textElement = document.getElementById("WindowMax");
     textElement.innerText = "On a Windows Computer.";
-       }
+    }
 
-        if(getMobileOperatingSystem() == "MacComp"{
+  if(getMobileOperatingSystem() == "MacComp")
+  {
     const textElement = document.getElementById("WindowMax");
     textElement.innerText = "On a Mac Computer.";
-       }
+  }
     
+
