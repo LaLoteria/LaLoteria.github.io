@@ -2,8 +2,8 @@ const currentUrl = window.location.href;
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
+    if (/windows/i.test(userAgent)) {
+        return "WindowsComp";
     }
     
     if (/android/i.test(userAgent)) {
@@ -13,11 +13,12 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
-
+   if (/Macintosh/i.test(userAgent) && navigator.maxTouchPoints <= 1) {
+        return "MacComp";
     return "unknown";
 }
 
-function TestPage(){
+function ToAppStore(){
     const NewCurrentUrl = window.location.href;
 console.log(NewCurrentUrl);
     if (currentUrl == NewCurrentUrl){
@@ -29,7 +30,7 @@ console.log(NewCurrentUrl);
 if (getMobileOperatingSystem() == "iOS") {
     try {window.location.href = "loteria://party"+ document.location.search;}
       catch(err) { }
-      setTimeout(()=>{TestPage()},
+      setTimeout(()=>{ToAppStore()},
       3000);
 }
 
@@ -39,10 +40,23 @@ if (getMobileOperatingSystem() == "Android") {
 3000);
 }
 
-window.onload = function() {
- const textElement = document.getElementById("WindowMax");
+
+    if(getMobileOperatingSystem() == "WindowsComp"{
+    const textElement = document.getElementById("WindowMax");
+    textElement.innerText = "On a Windows Computer.";
+       }
+
+        if(getMobileOperatingSystem() == "MacComp"{
+    const textElement = document.getElementById("WindowMax");
+    textElement.innerText = "On a Mac Computer.";
+       }
+
+    
+//window.onload = function() {
+ //const textElement = document.getElementById("WindowMax");
     
     // 3. Change the text content
-    textElement.innerText = "now to see if this is a window computer or not";
-}
+   // textElement.innerText = "now to see if this is a window computer or not";
+//}
+
 
