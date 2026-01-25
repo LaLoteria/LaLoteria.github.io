@@ -21,8 +21,16 @@ function getMobileOperatingSystem() {
     }
 }
 
-// Example usage:
-console.log("You are using a: " + getDeviceType());
+window.onload = function() {
+    // 1. Get the detected device type
+    const detectedDevice = getDeviceType();
+    
+    // 2. Find the element by its ID
+    const textElement = document.getElementById("device-name");
+    
+    // 3. Change the text content
+    textElement.innerText = detectedDevice;
+};
 
 
 
@@ -58,6 +66,7 @@ if(getMobileOperatingSystem() == "WindowsComp"{
     document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
 
 }
+
 
 
 
