@@ -43,5 +43,6 @@ window.onload = function() {
  const textElement = document.getElementById("WindowMax");
     
     // 3. Change the text content
-    textElement.innerText = "We changed it!";
+    textElement.innerText = "now to see if this is a window computer or not";
 }
+
