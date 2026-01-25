@@ -36,11 +36,10 @@ console.log(NewCurrentUrl);
     
 
 if (getMobileOperatingSystem() == "iOS") {
-    try {window.location.href = "loteria://party"+ document.location.search;}
-      catch(err) { }
-      setTimeout(()=>{ToAppStore()},
-      3000);
+    window.location.href = "loteria://party" + document.location.search;
+    setTimeout(() => { ToAppStore(); }, 3000);
 }
+
 
 if (getMobileOperatingSystem() == "Android") {
     window.location.href = "loteria://party" + document.location.search;
@@ -61,4 +60,5 @@ if (getMobileOperatingSystem() == "Android") {
     textElement.innerText = "On a Mac Computer.";
   }
     
+
 
