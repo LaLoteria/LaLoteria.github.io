@@ -26,7 +26,7 @@ window.onload = function() {
     const detectedDevice = getDeviceType();
     
     // 2. Find the element by its ID
-    const textElement = document.getElementById("device-name");
+    const textElement = document.getElementById("heading");
     
     // 3. Change the text content
     textElement.innerText = detectedDevice;
@@ -61,11 +61,12 @@ if (getMobileOperatingSystem() == "Android") {
 3000);
 }
 
-if(getMobileOperatingSystem() == "WindowsComp"{
-    console.log("using window computer");
-    document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
+//if(getMobileOperatingSystem() == "WindowsComp"{
+//    console.log("using window computer");
+  //  document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
 
 }
+
 
 
 
