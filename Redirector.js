@@ -50,13 +50,4 @@ if (getMobileOperatingSystem() == "Android") {
     const textElement = document.getElementById("WindowMax");
     textElement.innerText = "On a Mac Computer.";
        }
-
     
-//window.onload = function() {
- //const textElement = document.getElementById("WindowMax");
-    
-    // 3. Change the text content
-   // textElement.innerText = "now to see if this is a window computer or not";
-//}
-
-
