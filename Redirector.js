@@ -1,23 +1,37 @@
 const currentUrl = window.location.href;
 
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/windows/i.test(userAgent)) {
-        return "WindowsComp";
-    }
-    
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
-    
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
 
-    return "unknown";
+
+
+function getMobileOperatingSystem() {
+    const ua = navigator.userAgent;
+
+    if (/iPhone|iPad|iPod/i.test(ua)) {
+        return "iOS";
+    } else if (/Android/i.test(ua)) {
+        return "Android";
+    } else if (/Win/i.test(ua)) {
+        return "WindowsComp";
+    } else if (/Mac/i.test(ua)) {
+        // Note: Newer iPads sometimes identify as Macintosh; 
+        // common fix is to check for touch support.
+        return (navigator.maxTouchPoints > 0) ? "iPad" : "Mac Computer";
+    } else {
+        return "Other/Unknown";
+    }
 }
 
-function TestPage(){
+// Example usage:
+console.log("You are using a: " + getDeviceType());
+
+
+
+
+
+
+
+
+function ToAppStore(){
     const NewCurrentUrl = window.location.href;
 console.log(NewCurrentUrl);
     if (currentUrl == NewCurrentUrl){
@@ -29,7 +43,7 @@ console.log(NewCurrentUrl);
 if (getMobileOperatingSystem() == "iOS") {
     try {window.location.href = "loteria://party"+ document.location.search;}
       catch(err) { }
-      setTimeout(()=>{TestPage()},
+      setTimeout(()=>{ToAppStore()},
       3000);
 }
 
@@ -44,6 +58,7 @@ if(getMobileOperatingSystem() == "WindowsComp"{
     document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
 
 }
+
 
 
 
