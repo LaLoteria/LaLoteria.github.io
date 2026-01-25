@@ -1,45 +1,23 @@
 const currentUrl = window.location.href;
 
-
-
-
 function getMobileOperatingSystem() {
-    const ua = navigator.userAgent;
-
-    if (/iPhone|iPad|iPod/i.test(ua)) {
-        return "iOS";
-    } else if (/Android/i.test(ua)) {
-        return "Android";
-    } else if (/Win/i.test(ua)) {
-        return "WindowsComp";
-    } else if (/Mac/i.test(ua)) {
-        // Note: Newer iPads sometimes identify as Macintosh; 
-        // common fix is to check for touch support.
-        return (navigator.maxTouchPoints > 0) ? "iPad" : "Mac Computer";
-    } else {
-        return "Other/Unknown";
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
     }
+    
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+    
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
 }
 
-window.onload = function() {
-    // 1. Get the detected device type
-    const detectedDevice = getDeviceType();
-    
-    // 2. Find the element by its ID
-    const textElement = document.getElementById("heading");
-    
-    // 3. Change the text content
-    textElement.innerText = detectedDevice;
-};
-
-
-
-
-
-
-
-
-function ToAppStore(){
+function TestPage(){
     const NewCurrentUrl = window.location.href;
 console.log(NewCurrentUrl);
     if (currentUrl == NewCurrentUrl){
@@ -51,7 +29,7 @@ console.log(NewCurrentUrl);
 if (getMobileOperatingSystem() == "iOS") {
     try {window.location.href = "loteria://party"+ document.location.search;}
       catch(err) { }
-      setTimeout(()=>{ToAppStore()},
+      setTimeout(()=>{TestPage()},
       3000);
 }
 
@@ -61,15 +39,9 @@ if (getMobileOperatingSystem() == "Android") {
 3000);
 }
 
-//if(getMobileOperatingSystem() == "WindowsComp"{
-//    console.log("using window computer");
-  //  document.getElementById("heading").innerHTML = "<em>Updated with HTML</em>";
-
+window.onload = function() {
+ const textElement = document.getElementById("WindowMax");
+    
+    // 3. Change the text content
+    textElement.innerText = "We changed it!";
 }
-
-
-
-
-
-
-
