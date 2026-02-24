@@ -58,9 +58,10 @@ if (getMobileOperatingSystem() == "Android") {
   if(getMobileOperatingSystem() == "MacComp")
   {
     const textElement = document.getElementById("WindowMax");
-    textElement.innerText = "On a Mac Computer.";
+    textElement.innerText = "On a Mac Computer!";
   }
     
+
 
 
 
