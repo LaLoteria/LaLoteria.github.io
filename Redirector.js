@@ -57,11 +57,12 @@ if (getMobileOperatingSystem() == "Android") {
   if(getMobileOperatingSystem() == "MacComp")
   {
     const textElement = document.getElementById("WindowMax");
-    textElement.innerText = "On a Mac Computer";
+    textElement.innerText = "On a Mac Computer.";
        window.location.href = "loteria://party" + document.location.search;
-    setTimeout(() => { ToAppStore(); }, 3000); 
+    setTimeout(() => { window.location.href = "macappstore://://itunes.apple.com<1456692257>?"; }, 3000); 
   }
     
+
 
 
 
