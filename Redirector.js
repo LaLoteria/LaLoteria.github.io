@@ -51,17 +51,20 @@ if (getMobileOperatingSystem() == "Android") {
     if(getMobileOperatingSystem() == "WindowsComp")
     {
     const textElement = document.getElementById("WindowMax");
-    textElement.innerText = "On a Windows Computer.";
+    textElement.innerText = "On a Windows Computer!";
+         window.location.href = "loteria://party" + document.location.search;
+    setTimeout(() => { window.location.href = "ms-windows-store://pdp/?productid=9PNQZM8DF8SJ"; }, 10000);
           }
 
   if(getMobileOperatingSystem() == "MacComp")
   {
     const textElement = document.getElementById("WindowMax");
-    textElement.innerText = "On a Mac Computer!";
+    textElement.innerText = "On a Mac Computer,";
        window.location.href = "loteria://party" + document.location.search;
-    setTimeout(() => { window.location.href = "macappstore://itunes.apple.com/app/id1456692257"; }, 3000); 
+    setTimeout(() => { window.location.href = "macappstore://itunes.apple.com/app/id1456692257"; }, 10000); 
   }
     
+
 
 
 
