@@ -52,7 +52,8 @@ if (getMobileOperatingSystem() == "Android") {
     {
     const textElement = document.getElementById("WindowMax");
     textElement.innerText = "On a Windows Computer.";
-    }
+        window.location.href = "loteria://party" + document.location.search;
+    setTimeout(() => { ToAppStore(); }, 3000);    }
 
   if(getMobileOperatingSystem() == "MacComp")
   {
@@ -60,6 +61,7 @@ if (getMobileOperatingSystem() == "Android") {
     textElement.innerText = "On a Mac Computer.";
   }
     
+
 
 
 
