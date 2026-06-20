@@ -1,3 +1,12 @@
 {
-  "Coins": "GX571285"
+  "activeCodes": [
+    {
+      "code": "LAUNCH100",
+      "rewardAmount": 100
+    },
+    {
+      "code": "SUMMER2026",
+      "rewardAmount": 50
+    }
+  ]
 }
